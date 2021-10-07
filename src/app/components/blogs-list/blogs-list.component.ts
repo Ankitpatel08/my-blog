@@ -10,6 +10,7 @@ import { IBlog } from 'src/app/i-blog';
 export class BlogsListComponent implements OnInit {
   blogs : IBlog[];
   searchString: string = '';
+  imageVisibility: boolean = true;
 
   constructor(private _blogService: BlogService) {
     this.blogs = this._blogService.blogs;
@@ -21,5 +22,9 @@ export class BlogsListComponent implements OnInit {
   onDeleteClick(blogId: number) {
     this._blogService.deleteBlog(blogId);
     this.blogs = this._blogService.blogs;
+  }
+
+  toggleImage(event: any) {
+    this.imageVisibility = !this.imageVisibility;
   }
 }

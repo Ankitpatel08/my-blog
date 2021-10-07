@@ -17,3 +17,9 @@
 .filters {
   margin: 20px 0;
 }
+
+.card-image {
+  &.is-hide {
+    display: none;
+  }
+}
