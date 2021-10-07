@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BlogsListComponent } from './components/blogs-list/blogs-list.component';
 import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     BlogsListComponent,
-    CreateBlogComponent
+    CreateBlogComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { IBlog } from 'src/app/i-blog';
 })
 export class BlogsListComponent implements OnInit {
   blogs : IBlog[];
+  searchString: string = '';
 
   constructor(private _blogService: BlogService) {
     this.blogs = this._blogService.blogs;
@@ -21,5 +22,4 @@ export class BlogsListComponent implements OnInit {
     this._blogService.deleteBlog(blogId);
     this.blogs = this._blogService.blogs;
   }
-
 }

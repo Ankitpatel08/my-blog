@@ -1,6 +1,15 @@
 <section class="section">
+  <div class="filters">
+    <div class="field">
+      <label class="label">Filter</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="search by category" [(ngModel)]="searchString">
+      </div>
+    </div>
+  </div>
+
   <div class="cards columns cards-wrapper" *ngIf='blogs.length > -1'>
-    <div *ngFor="let blog of blogs" class="card column is-one-third">
+    <div *ngFor="let blog of blogs | filter : searchString : 'category'" class="card column is-one-third">
       <div class="card-image">
         <figure class="image is-4by3">
           <img src="{{blog.img}}" alt="Placeholder image">
