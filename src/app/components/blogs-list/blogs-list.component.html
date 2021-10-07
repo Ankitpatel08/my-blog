@@ -1,0 +1,28 @@
+<section class="section">
+  <div class="cards columns cards-wrapper" *ngIf='blogs.length > -1'>
+    <div *ngFor="let blog of blogs" class="card column is-one-third">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="{{blog.img}}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2 class="title">{{blog.title}}</h2><br />
+        <h3 class="subtitle">Author: {{blog.author}}</h3>
+        <h3 class="subtitle">Category: {{blog.category}}</h3>
+
+        <div class="content">
+          {{blog.description}}
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a routerLink="/edit-blog/{{blog.blogId}}" class="card-footer-item">Edit</a>
+        <a routerLink="/blogs" class="card-footer-item" (click)="onDeleteClick(blog.blogId)">Delete</a>
+      </footer>
+    </div>
+  </div>
+
+  <div class="columns is-centered add-blog-cta">
+    <a class="button is-primary" routerLink='/create-blog'>Add Blog</a>
+  </div>
+</section>

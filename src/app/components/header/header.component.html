@@ -1,0 +1,23 @@
+<header class="">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <h1 class="title has-text-primary">{{title}}</h1>
+
+      <a role="button" class="navbar-burger" [class.is-active]="this.menuOpen === true" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" (click)="onHamburgerClick($event)">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu" [class.is-active]="this.menuOpen === true">
+      <div class="navbar-start">
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" routerLink="/blogs">blogs</a>
+        <a class="navbar-item" routerLink="/create-blog">create</a>
+        <a class="navbar-item" routerLink="/categories">categories</a>
+      </div>
+    </div>
+  </nav>
+</header>
